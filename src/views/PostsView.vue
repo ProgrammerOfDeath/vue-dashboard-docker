@@ -5,7 +5,7 @@ import PostsList from '@/components/PostsList.vue'
 
 <template>
   <AppMain>
-    <h1 class="text-center text-2xl mb-6">All Posts</h1>
+    <h1 class="text-center text-2xl mb-6" id="todos">All Posts</h1>
     <PostsList></PostsList>
   </AppMain>
 </template>

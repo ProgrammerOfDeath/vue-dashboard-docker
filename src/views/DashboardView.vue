@@ -6,13 +6,13 @@ import PostsList from '@/components/PostsList.vue'
 
 <template>
   <AppMain>
-    <h1 class="text-center text-2xl mb-6">My Dashboard</h1>
+    <h1 class="text-center text-3xl mb-6">My Dashboard</h1>
     <section class="mb-10">
-      <h2 class="text-center text-xl mb-4">Latest Posts</h2>
+      <h2 class="text-center text-2xl mb-4">Latest Posts</h2>
       <PostsList></PostsList>
     </section>
     <section>
-      <h2 class="text-center text-xl mb-4">My Todos</h2>
+      <h2 class="text-center text-2xl mb-4">My Todos</h2>
       <TodoList></TodoList>
     </section>
   </AppMain>
