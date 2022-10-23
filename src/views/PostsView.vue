@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import AppMain from '../components/layout/AppMain.vue'
+import PostsList from '@/components/PostsList.vue'
 </script>
 
 <template>
   <AppMain>
-    <h1>POSTS</h1>
+    <h1 class="text-center text-2xl mb-6">All Posts</h1>
+    <PostsList></PostsList>
   </AppMain>
 </template>
 
