@@ -3,8 +3,8 @@ module.exports = {
   tabWidth: 2,
   useTabs: false,
   printWidth: 80,
-  endOfLine: "auto",
+  endOfLine: 'auto',
   singleQuote: true,
   bracketSpacing: true,
-  arrowParens: "always"
-};
+  arrowParens: 'always',
+}
