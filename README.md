@@ -1,24 +1,33 @@
 # vue-dashboard-docker
+Simple dashboard application with Vue
+
+## What you need
+
+You need to have docker installed.
+
+You also can install everything locally. Than you'll need node installed (v16.8).
 
 ## Project setup
 ```
-npm install
+docker-compose up -d --build
 ```
 
-### Compiles and hot-reloads for development
+or 
+
 ```
-npm run serve
+npm install && npm run serve
 ```
 
-### Compiles and minifies for production
+## Lints and fixes files
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+docker-compose exec fontend npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Features
+
+- Light/dark support
+- Docker
+- Responsive
+- TypeScript
+- DaisyUI with Tailwind
+- Vue3 with composition API
