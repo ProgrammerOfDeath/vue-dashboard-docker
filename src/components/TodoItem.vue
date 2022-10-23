@@ -11,21 +11,23 @@ interface Props {
 const props = defineProps<Props>()
 </script>
 <template>
-  <AppCard class="basis-full md:basis-1/2 lg:basis-1/3 mb-5">
-    <div class="form-control">
-      <label class="cursor-pointer label">
-        <input
-          type="checkbox"
-          class="checkbox checkbox-primary"
-          :checked="props.status === 'completed'"
-        />
-        <span class="label-text ml-4">{{ props.title }}</span>
-      </label>
-    </div>
-    <div v-if="props.due_on">
-      Due on: {{ new Date(props.due_on).toDateString() }}
-    </div>
-  </AppCard>
+  <div class="px-2 basis-full md:basis-1/2 lg:basis-1/3 mb-3">
+    <AppCard class="h-full">
+      <div class="form-control">
+        <label class="cursor-pointer justify-start label">
+          <input
+            type="checkbox"
+            class="checkbox checkbox-primary"
+            :checked="props.status === 'completed'"
+          />
+          <span class="label-text ml-4">{{ props.title }}</span>
+        </label>
+      </div>
+      <div v-if="props.due_on">
+        Due on: {{ new Date(props.due_on).toDateString() }}
+      </div>
+    </AppCard>
+  </div>
 </template>
 
 <style scoped></style>

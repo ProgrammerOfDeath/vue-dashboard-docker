@@ -29,8 +29,9 @@ onMounted(async () => {
   }
 })
 </script>
+
 <template>
-  <div class="flex gap-3" v-if="todosArr.length && !loading">
+  <div class="flex flex-wrap" v-if="todosArr.length && !loading">
     <TodoItem
       v-for="(todo, index) in todosArr"
       :key="index"
