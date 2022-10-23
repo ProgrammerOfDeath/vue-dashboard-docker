@@ -3,6 +3,7 @@ import Post from '../types/Post'
 import { onMounted, reactive, ref } from 'vue'
 import PostItem from '@/components/PostItem.vue'
 import CardSkeleton from './ui/CardSkeleton.vue'
+import fetchHeader from '@/utils/fetchHeader'
 
 let postsArr: Post[] = reactive([])
 let loading = ref(false)
@@ -11,7 +12,8 @@ onMounted(async () => {
   try {
     loading.value = true
     const postsReponse = await fetch(
-      'https://gorest.co.in/public/v2/posts?page=1&per_page=20'
+      'https://gorest.co.in/public/v2/posts?page=1&per_page=20',
+      { method: 'GET', headers: fetchHeader }
     )
     const postsData: Post[] = await postsReponse.json()
 

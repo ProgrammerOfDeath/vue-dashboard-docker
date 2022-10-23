@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import fetchHeader from '@/utils/fetchHeader'
 import { reactive, onMounted, ref } from 'vue'
 import Todo from '../types/Todo'
 import TodoItem from './TodoItem.vue'
@@ -12,7 +13,10 @@ let loading = ref(false)
 onMounted(async () => {
   try {
     loading.value = true
-    const todosResponse = await fetch('https://gorest.co.in/public/v2/todos')
+    const todosResponse = await fetch('https://gorest.co.in/public/v2/todos', {
+      method: 'GET',
+      headers: fetchHeader,
+    })
     const todosData: Todo[] = await todosResponse.json()
 
     const myTodos = todosData.filter((todo) => todo.user_id === USER_ID)
