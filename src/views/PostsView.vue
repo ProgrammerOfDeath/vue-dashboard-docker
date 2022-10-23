@@ -1,9 +1,11 @@
-<script></script>
+<script setup lang="ts">
+import AppMain from '../components/layout/AppMain.vue'
+</script>
 
 <template>
-  <main>
-    <h1>Posts</h1>
-  </main>
+  <AppMain>
+    <h1>POSTS</h1>
+  </AppMain>
 </template>
 
 <script></script>

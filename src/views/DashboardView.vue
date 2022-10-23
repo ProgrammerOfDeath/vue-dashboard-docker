@@ -1,7 +1,10 @@
-<script></script>
+<script setup lang="ts">
+import AppCard from '../components/ui/AppCard.vue'
+import AppMain from '../components/layout/AppMain.vue'
+</script>
 
 <template>
-  <main>
+  <AppMain>
     <h1>My Dashboard</h1>
     <div>
       <h2>Latest Posts</h2>
@@ -11,7 +14,7 @@
         </AppCard>
       </div>
     </div>
-  </main>
+  </AppMain>
 </template>
 
 <style></style>
