@@ -3,9 +3,11 @@ import { ref } from 'vue'
 export default async function useFetch(url: string, method = 'GET') {
   const fetchHeader = {
     method: method,
-    headers: {
-      Authorization: 'Bearer ' + process.env.AUTH_TOKEN,
-    },
+    headers: new Headers({
+      authorization: `Bearer ${process.env.AUTH_TOKEN}`,
+      'content-type': 'application/json',
+      accept: 'application/json',
+    }),
   }
 
   const data = ref()
