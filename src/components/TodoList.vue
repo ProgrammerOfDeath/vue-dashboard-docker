@@ -5,7 +5,7 @@ import Todo from '../types/Todo'
 import TodoItem from './TodoItem.vue'
 import CardSkeleton from './ui/CardSkeleton.vue'
 
-const USER_ID = 3668
+const USER_ID = process.env.VUE_APP_USER_ID
 
 let todosArr: Todo[] = reactive([])
 let loading = ref(false)
@@ -19,7 +19,7 @@ onMounted(async () => {
     })
     const todosData: Todo[] = await todosResponse.json()
 
-    const myTodos = todosData.filter((todo) => todo.user_id === USER_ID)
+    const myTodos = todosData.filter((todo) => todo.user_id === +USER_ID)
 
     myTodos.forEach((todo) => todosArr.push(todo))
   } catch (e) {

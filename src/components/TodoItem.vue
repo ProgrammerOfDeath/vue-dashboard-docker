@@ -4,7 +4,7 @@ import AppCard from './ui/AppCard.vue'
 interface Props {
   title: string
   status: string
-  due_on?: string
+  due_on?: string | null
 }
 
 // eslint-disable-next-line no-undef
