@@ -13,15 +13,16 @@ let loading = ref(false)
 onMounted(async () => {
   try {
     loading.value = true
-    const todosResponse = await fetch('https://gorest.co.in/public/v2/todos', {
+    const todosResponse = await fetch(`https://gorest.co.in/public/v2/users/${USER_ID}/todos`, {
       method: 'GET',
       headers: fetchHeader,
     })
     const todosData: Todo[] = await todosResponse.json()
 
-    const myTodos = todosData.filter((todo) => todo.user_id === +USER_ID)
+    if (todosData?.length) {
+      todosData.forEach((todo) => todosArr.push(todo))
+    }
 
-    myTodos.forEach((todo) => todosArr.push(todo))
   } catch (e) {
     console.log(e)
   } finally {
