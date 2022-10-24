@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar bg-base-200 rounded-lg container mx-auto mb-8 fixed z-[100000] top-0 left-0 right-0">
+  <nav class="navbar bg-base-200 rounded-lg container mx-auto mb-8 fixed z-[100000] top-0 inset-x-0">
     <div class="navbar-start">
       <div class="dropdown">
         <label tabindex="0" class="btn btn-ghost btn-circle">
