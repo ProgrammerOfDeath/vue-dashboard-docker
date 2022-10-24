@@ -18,6 +18,11 @@ or
 npm install && npm run serve
 ```
 
+Afterwards, you should access the site under
+```
+localhost:8080
+```
+
 ## Lints and fixes files
 ```
 docker-compose exec frontend npm run lint
