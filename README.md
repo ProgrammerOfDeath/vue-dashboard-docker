@@ -20,12 +20,12 @@ npm install && npm run serve
 
 ## Lints and fixes files
 ```
-docker-compose exec fontend npm run lint
+docker-compose exec frontend npm run lint
 ```
 
 ## Features
 
-- Light/dark support
+- Light/dark theme support
 - Docker
 - Responsive
 - TypeScript
