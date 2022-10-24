@@ -41,10 +41,10 @@ onMounted(async () => {
       :due_on="todo.due_on"
     />
   </div>
-  <div class="flex gap-3" v-else>
-    <CardSkeleton class="flex-1"></CardSkeleton>
-    <CardSkeleton class="flex-1"></CardSkeleton>
-    <CardSkeleton class="flex-1"></CardSkeleton>
+  <div v-else class="flex justify-between flex-wrap">
+    <div class="px-2 basis-full md:basis-1/2 lg:basis-1/3 mb-3 lg:mb-0" v-for="i in 3" :key="i">
+      <CardSkeleton></CardSkeleton>
+    </div>
   </div>
 </template>
 
